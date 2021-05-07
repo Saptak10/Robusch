@@ -54,51 +54,68 @@ text-align: left;
   transform: scaleX(1);
 }
 
-/*search bar stylying*/
+/*search area stylying*/
 
 .menu .search-area{
 float: right;
 }
-.menu input[type=text] {
-  padding: 6px;
-  margin-top: 2px;
-  font-size: 15px;
-  border: 4px;
-  color:orange;
-  background: black;
-  border-color: orange;
+
+.menu .search-area .icon-container {
+  margin-top: 50px;
+  margin-right: 20px;
+  width: 100%;
+  height: 45px;
 }
 
-.menu input[placeholder=Search] {
-  padding: 6px;
-  text-align: center;
-  margin-top: 2px;
-  font-size: 15px;
-  border: 4px;
-  color:orange;
-  border-color: orange;
-}
-
-.menu .search-area button {
-  float: right;
-  padding: 6px 10px;
-  margin-left: 8px;
-  color:orange;
-  background: none;
-  font-size: 20px;
-  border: none;
+.menu .search-area .icon {
   cursor: pointer;
-  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.menu .search-area .icon::before, .menu .search-area .icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.25s ease;
+  border-radius: 30px;
+}
+.menu .search-area .icon i {
+  position: relative;
+  color: #FFFFFF;
+  font-size: 30px;
+  margin-top: 15px;
+  transition: all 0.25s ease;
 }
 
-.menu .search-area button:hover {
-  color:red;
-  
+.menu .search-area .icon-expand::after {
+  box-shadow: inset 0 0 0 1px #C82647;
+}
+.menu .search-area .icon-expand::before {
+  background: #C82647;
+  box-shadow: inset 0 0 0 60px #2d2c3e;
+}
+.menu .search-area .icon-expand:hover::before {
+  box-shadow: inset 0 0 0 1px #2d2c3e;
 }
 
-.menu .search-area button i:hover {
-  color:red;
-  opacity: 1;
+.menu .search-area .icon-rotate:hover {
+  transition: background 0.001s ease 0.3s;
+  background: #7E3661;
+}
+
+.fa-search{
+margin-left: 9px;
+margin-bottom: 10px;
+padding-bottom: 100px;
 }
 
 .aboutpage{
@@ -433,7 +450,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 ::-webkit-scrollbar-thumb:hover {
   background-color: red;
 }
-
 @media only screen and (max-width: 600px) {
   .homepage {
   background-image: url("img11.jpg");
