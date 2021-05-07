@@ -4,8 +4,8 @@ html{
 
 body{
 	margin:0;
-  background: linear-gradient(#141e30, #243b55);
   font-family:sans-serif;
+  
 }
 
 .menu{
@@ -33,9 +33,7 @@ text-align: left;
 	color:grey;
 }
 
-.menu a.bottomline
-{
-	
+.menu a.bottomline{
     position: relative;
 }
 
@@ -104,13 +102,21 @@ float: right;
 }
 
 .aboutpage{
-	max-height: 20px;
+	min-height: 50px;
 }
 
-p.p1 b{
-	font-size: 130%;
-	color:red;
+.aboutpage center:hover{
+text-decoration: underline #7f00ff;
 }
+
+.border {
+  border-radius: 2px;
+  border: 2px;
+  border-color: grey;
+  border-style: solid;
+  margin:0px;
+}
+
 .contactpage{
 font-family: sans-serif;
   background: linear-gradient(#141e30, #243b55);
@@ -173,10 +179,11 @@ img{
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background-color: rgba(0,0,0,.5);
+  background-color: rgb(60, 60, 60);;
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0px 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
+  border-color: blue;
 }
 
 .login-box h2 {
@@ -244,7 +251,7 @@ font-family:sans-serif;
 letter-spacing: 4px
 }
 
-.login-box a input:hover {
+.login-box form a input:hover {
 	color:black;
 	font-size: 15px;
 	text-transform: uppercase;
@@ -349,7 +356,8 @@ letter-spacing: 4px
 
 .footer{
 	height: 80px;
-	color:grey;
+	color:black;
+  
 }
 
 .fa {
@@ -362,7 +370,7 @@ letter-spacing: 4px
 }
 
 .fa:hover {
-    opacity:0.4;
+    opacity:0.5;
 }
 
 .fa-facebook {
@@ -399,7 +407,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 }
 
 .fa-github{
-	color:white;
+	color:black;
+  font-size: 50px;
 }
 
 /* width */
@@ -423,4 +432,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .homepage {
+  background-image: url("img11.jpg");
+  
+  background-blend-mode: hard-light;
+  background-size: 100% 100%;
+  
+  height:609px;
+  vertical-align: middle;
+}
+.homepage b:first-letter{
+color:black;
+}
 }
