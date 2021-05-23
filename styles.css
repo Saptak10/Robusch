@@ -145,7 +145,7 @@ font-family: sans-serif;
 	background-blend-mode: hard-light;
 	background-size: 100% 100%;
   
-  height:609px;
+  height:100vh;
   vertical-align: middle;
 }
 .homepage b:first-letter{
